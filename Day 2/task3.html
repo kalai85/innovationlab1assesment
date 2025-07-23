@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Loop Control Practice</title>
+</head>
+<body>
+  <h2>Loop Practice - Open Console to View Output</h2>
+
+  <script>
+    console.log("----- WHILE LOOP -----");
+
+    let i = 1;
+    while (i <= 10) {
+      console.log(i);
+      i++;
+    }
+
+    console.log("----- DO-WHILE LOOP -----");
+    let userInput;
+    let correctAnswer = "yes";
+    let attempts = ["no", "maybe", "yes"]; 
+    let index = 0;
+
+    do {
+      userInput = attempts[index]; 
+      console.log("User input:", userInput);
+      index++;
+    } while (userInput !== correctAnswer && index < attempts.length);
+
+    if (userInput === correctAnswer) {
+      console.log("Correct input received! ✅");
+    } else {
+      console.log("Input attempts exhausted ❌");
+    }
+
+    console.log("----- FOR LOOP -----");
+
+    let N = 10;
+    let sum = 0;
+    for (let j = 1; j <= N; j++) {
+      sum += j;
+    }
+    console.log("Sum of first", N, "natural numbers is:", sum);
+
+    console.log("----- NESTED FOR LOOP (Multiplication Table) -----");
+
+    for (let a = 1; a <= 5; a++) {
+      let row = "";
+      for (let b = 1; b <= 10; b++) {
+        row += (a * b) + "\t";
+      }
+      console.log("Table for", a + ":", row);
+    }
+  </script>
+</body>
+</html>
